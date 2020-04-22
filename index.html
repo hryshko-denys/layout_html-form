@@ -9,7 +9,60 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>HTML Form</h1>
+  <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="get" id="form1" onsubmit="onSubmit()">
+    <fieldset>
+      <legend>Personal information</legend>
+      <label for="person-surname">Surname:</label>
+      <input id="person-surname" name="surname" type="text" autocomplete="off" required>
+      <label for="person-name">Name:</label>
+      <input id="person-name" name="name" type="text" autocomplete="off" required><br>
+      <label for="person-age">How old are You?</label>
+      <input id="person-age" name="age" type="number" value="12" min="0" max="160"><br>
+      <label for="person-fullage">Full date of birth:</label>
+      <input id="person-fullage" name="data-of-birth" type="date"><br>
+      <label for="person-agreement">I accept the term of agreement</label>
+      <input id="person-agreement" name="term-of-agreement" type="checkbox">
+    </fieldset>
+    <fieldset class="form-block">
+      <legend>Registration</legend>
+      <label for="person-email">Email:</label>
+      <input id="person-email" name="email" type="email" placeholder="email@example.com" required multiple><br>
+      <label for="person-password">Password:</label>
+      <input id="person-password" name="password" type="password" required minlength="5">
+    </fieldset>
+    <fieldset class="form-block">
+      <legend>An interesting fact about you!</legend>
+      <label>Do you love cats?
+      <input id="love-cat-yes" name="question-about-cat" type="radio">
+      <label for="love-cat-yes">Yes</label>
+      <input id="love-cat-no" name="question-about-cat" type="radio">
+      <label for="love-cat-no">No</label>
+      </label><br>
+      <label for="person-color">What is your favourite calour?</label>
+      <input id="person-color" name="color" type="color"><br>
+      <label for="person-time-to-bed">What time do your go to bed?</label>
+      <input id="person-time-to-bed" name="time-to-bed" type="time"><br>
+      <label for="person-car-brend">What are your favourite brand of cars?</label>
+      <select id="person-car-brend" name="car-brend">
+        <option value="BMW">BMW</option>
+        <option value="Audi">Audi</option>
+        <option value="Lada">Lada</option>
+      </select><br>
+      <label for="work-rate">How do you rate our work?</label>
+      <input id="work-rate" name="question-work-rate" type="range" min="0" max="10" value="0" step="1">
+    </fieldset>
+    <fieldset class="form-block">
+      <legend>Additional info</legend>
+      <label for="person-comments">Comments:</label>
+      <textarea id="person-comments" name="comments" maxlength="300"></textarea><br>
+      <label for="person-recommendation">Would you recommend us?</label>
+      <select id="person-recommendation" name="recommendation">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </fieldset>
+  </form>
+  <button class="button-form" type="submit" form="form1" value="Submit">Submit</button>
   <script type="text/javascript" src="./main.js"></script>
 </body>
 </html>
